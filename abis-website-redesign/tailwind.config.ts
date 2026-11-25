@@ -16,6 +16,8 @@ const config: Config = {
         "fg-subtle": "rgb(var(--fg-subtle) / <alpha-value>)",
         "accent-fg": "rgb(var(--accent-fg) / <alpha-value>)",
         "on-accent": "rgb(var(--on-accent) / <alpha-value>)",
+        "fg-bright": "rgb(var(--fg-bright) / <alpha-value>)",
+        danger: "rgb(var(--danger) / <alpha-value>)",
         abis: {
           navy: { DEFAULT: "#070C1E", deep: "#040714", card: "#0D1530", surface: "#111C40", border: "#1E2C5B" },
           blue: { DEFAULT: "#206DF7", hover: "#1858CA", light: "#4B89F9", soft: "#EAF1FE" },

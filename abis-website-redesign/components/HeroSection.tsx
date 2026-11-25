@@ -15,7 +15,7 @@ export default function HeroSection() {
             {/* Enterprise Tag */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-fg/5 border border-abis-blue/30 backdrop-blur-md">
               <span className="w-2 h-2 rounded-full bg-abis-blue animate-pulse" />
-              <span className="text-xs font-semibold uppercase tracking-wider text-fg">
+              <span className="text-xs font-semibold uppercase tracking-wider text-fg-bright">
                 Enterprise IT Consulting &amp; Staffing Solutions
               </span>
             </div>
@@ -44,7 +44,7 @@ export default function HeroSection() {
 
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base text-fg bg-fg/5 hover:bg-fg/5 border border-theme/60 hover:border-theme/60 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base text-fg-bright bg-fg/5 hover:bg-fg/5 border border-theme/60 hover:border-theme/60 transition-all duration-200"
               >
                 <span>Partner With Us</span>
               </Link>
@@ -79,7 +79,7 @@ export default function HeroSection() {
                     <span className="text-xs uppercase font-mono tracking-wider text-accent-fg">
                       ABIS Extended Partner Model
                     </span>
-                    <h3 className="text-xl font-bold text-fg mt-1">
+                    <h3 className="text-xl font-bold text-fg-bright mt-1">
                       Full-Spectrum Delivery
                     </h3>
                   </div>
@@ -103,7 +103,7 @@ export default function HeroSection() {
                     >
                       <div className="flex items-center gap-3">
                         <span className={`w-2 h-2 rounded-full ${item.color}`} />
-                        <span className="text-sm font-medium text-fg">{item.label}</span>
+                        <span className="text-sm font-medium text-fg-bright">{item.label}</span>
                       </div>
                       <span className="text-xs font-mono text-fg-subtle bg-fg/5 px-2.5 py-1 rounded-md">
                         {item.status}

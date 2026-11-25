@@ -91,7 +91,7 @@ export default function WhoWeArePage() {
                   <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
                     Akshaya Business IT Solutions
                   </span>
-                  <p className="text-base font-bold text-fg mt-1">
+                  <p className="text-base font-bold text-fg-bright mt-1">
                     Delivering business momentum and talent excellence since 2000s.
                   </p>
                 </div>
@@ -126,9 +126,9 @@ export default function WhoWeArePage() {
                 <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
                   Official Statement
                 </span>
-                <h3 className="text-2xl font-bold text-fg mt-1">Our Vision</h3>
+                <h3 className="text-2xl font-bold text-fg-bright mt-1">Our Vision</h3>
               </div>
-              <blockquote className="text-lg sm:text-xl text-fg font-medium italic border-l-2 border-abis-blue pl-4 leading-relaxed">
+              <blockquote className="text-lg sm:text-xl text-fg-bright font-medium italic border-l-2 border-abis-blue pl-4 leading-relaxed">
                 &ldquo;To be a Leader in IT Consulting &amp; Staffing and a Trusted Partner to our clients.&rdquo;
               </blockquote>
               <p className="text-xs text-fg-subtle leading-relaxed">
@@ -145,9 +145,9 @@ export default function WhoWeArePage() {
                 <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
                   Official Statement
                 </span>
-                <h3 className="text-2xl font-bold text-fg mt-1">Our Mission</h3>
+                <h3 className="text-2xl font-bold text-fg-bright mt-1">Our Mission</h3>
               </div>
-              <blockquote className="text-lg sm:text-xl text-fg font-medium italic border-l-2 border-cyan-400 pl-4 leading-relaxed">
+              <blockquote className="text-lg sm:text-xl text-fg-bright font-medium italic border-l-2 border-cyan-400 pl-4 leading-relaxed">
                 &ldquo;To help Clients get the best Talent in the industry and help them become better organizations.&rdquo;
               </blockquote>
               <p className="text-xs text-fg-subtle leading-relaxed">

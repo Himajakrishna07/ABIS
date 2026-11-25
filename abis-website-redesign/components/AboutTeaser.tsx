@@ -122,7 +122,7 @@ export default function AboutTeaser() {
             {/* Client Footprint Badge */}
             <div className="p-5 rounded-2xl bg-fg/5 border border-theme/60 flex items-center justify-between text-xs text-fg-subtle">
               <div>
-                <span className="text-fg font-semibold block text-sm">Enterprise Collaboration</span>
+                <span className="text-fg-bright font-semibold block text-sm">Enterprise Collaboration</span>
                 <span>Captive Units, R&amp;D Centers &amp; Global Technology Leaders</span>
               </div>
               <Link href="/services" className="text-accent-fg font-medium hover:underline shrink-0">

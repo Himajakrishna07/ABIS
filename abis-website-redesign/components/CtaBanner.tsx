@@ -48,7 +48,7 @@ export default function CtaBanner({
 
             <Link
               href={secondaryButtonHref}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base text-fg bg-fg/5 hover:bg-fg/5 border border-theme/60 hover:border-theme/60 transition-all duration-200"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl font-semibold text-base text-fg-bright bg-fg/5 hover:bg-fg/5 border border-theme/60 hover:border-theme/60 transition-all duration-200"
             >
               <PhoneCall className="w-4 h-4 text-accent-fg" />
               <span>{secondaryButtonText}</span>

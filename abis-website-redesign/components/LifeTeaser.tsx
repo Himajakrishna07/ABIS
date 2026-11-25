@@ -125,7 +125,7 @@ export default function LifeTeaser() {
               </Link>
               <Link
                 href="/careers"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-fg bg-fg/5 hover:bg-fg/5 border border-theme/60 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-sm text-fg-bright bg-fg/5 hover:bg-fg/5 border border-theme/60 transition-colors"
               >
                 <span>View Career Opportunities</span>
               </Link>

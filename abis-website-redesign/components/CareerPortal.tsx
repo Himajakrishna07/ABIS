@@ -364,7 +364,7 @@ export default function CareerPortal() {
 
                 {formError && (
                   <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center gap-2 text-xs text-rose-300">
-                    <AlertCircle className="w-4 h-4 shrink-0 text-red-600 dark:text-red-400" />
+                    <AlertCircle className="w-4 h-4 shrink-0 text-danger" />
                     <span>{formError}</span>
                   </div>
                 )}

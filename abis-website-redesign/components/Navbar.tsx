@@ -101,15 +101,15 @@ export default function Navbar() {
       <div className="bg-bg-alt border-b border-theme/60 text-xs text-fg-subtle hidden lg:block">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+            <span className="flex items-center gap-1.5 hover:text-fg-bright transition-colors">
               <MapPin className="w-3.5 h-3.5 text-accent-fg" />
               Hyderabad &bull; Bengaluru &bull; New Jersey (USA)
             </span>
-            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+            <span className="flex items-center gap-1.5 hover:text-fg-bright transition-colors">
               <Phone className="w-3.5 h-3.5 text-accent-fg" />
               040-48546345
             </span>
-            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+            <span className="flex items-center gap-1.5 hover:text-fg-bright transition-colors">
               <Mail className="w-3.5 h-3.5 text-accent-fg" />
               hr@akshayaitsolutions.com
             </span>
@@ -141,8 +141,8 @@ export default function Navbar() {
               href="/"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold shadow-[0_0_15px_rgba(32,109,247,0.15)]"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold shadow-[0_0_15px_rgba(32,109,247,0.15)]"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Home
@@ -152,8 +152,8 @@ export default function Navbar() {
               href="/who-we-are"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/who-we-are")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Who We Are
@@ -169,8 +169,8 @@ export default function Navbar() {
                 type="button"
                 className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   pathname.startsWith("/services")
-                    ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                    : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                    ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
                 aria-expanded={servicesOpen}
               >
@@ -227,8 +227,8 @@ export default function Navbar() {
               href="/business-practices"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/business-practices")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Business Practices
@@ -238,8 +238,8 @@ export default function Navbar() {
               href="/life-at-abis"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/life-at-abis")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Life at ABIS
@@ -249,8 +249,8 @@ export default function Navbar() {
               href="/careers"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/careers")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Careers
@@ -260,8 +260,8 @@ export default function Navbar() {
               href="/contact"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/contact")
-                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
+                  ? "text-on-accent bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-bright hover:text-fg hover:bg-fg/5"
               }`}
             >
               Contact Us
@@ -297,7 +297,7 @@ export default function Navbar() {
               <Link
                 href="/"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
-                  isActive("/") ? "bg-abis-blue text-on-accent" : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                  isActive("/") ? "bg-abis-blue text-on-accent" : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Home
@@ -307,7 +307,7 @@ export default function Navbar() {
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/who-we-are")
                     ? "bg-abis-blue text-on-accent"
-                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Who We Are
@@ -358,7 +358,7 @@ export default function Navbar() {
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/business-practices")
                     ? "bg-abis-blue text-on-accent"
-                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Business Practices
@@ -369,7 +369,7 @@ export default function Navbar() {
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/life-at-abis")
                     ? "bg-abis-blue text-on-accent"
-                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Life at ABIS
@@ -380,7 +380,7 @@ export default function Navbar() {
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/careers")
                     ? "bg-abis-blue text-on-accent"
-                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Careers
@@ -391,7 +391,7 @@ export default function Navbar() {
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/contact")
                     ? "bg-abis-blue text-on-accent"
-                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
+                    : "text-fg-bright hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Contact Us

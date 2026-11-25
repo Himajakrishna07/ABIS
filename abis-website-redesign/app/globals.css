@@ -10,13 +10,15 @@
   --surface: 13 21 48;
   --surface-2: 17 28 64;
   --border: 30 44 91;
-  --fg: 241 245 249;
+  --fg: 255 255 255;
   --fg-muted: 203 213 225;
   --fg-subtle: 148 163 184;
   --accent: 32 109 247;
   --accent-fg: 75 137 249;
   --on-accent: 255 255 255;
   --overlay: 0 0 0;
+  --fg-bright: 226 232 240;
+  --danger: 251 113 133;
 }
 
 html.light {
@@ -33,6 +35,8 @@ html.light {
   --accent-fg: 29 78 216;
   --on-accent: 255 255 255;
   --overlay: 15 23 42;
+  --fg-bright: 51 65 85;
+  --danger: 220 38 38;
 }
 
 html { scroll-behavior: smooth; color-scheme: dark; }

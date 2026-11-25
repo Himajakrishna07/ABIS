@@ -132,7 +132,7 @@ export default function ContactForm({
 
       {errorMessage && (
         <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3 text-xs text-rose-300">
-          <AlertCircle className="w-5 h-5 shrink-0 text-red-600 dark:text-red-400" />
+          <AlertCircle className="w-5 h-5 shrink-0 text-danger" />
           <span>{errorMessage}</span>
         </div>
       )}
@@ -174,7 +174,7 @@ export default function ContactForm({
             className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
             <User className="w-3.5 h-3.5 text-accent-fg" />
-            Full Name <span className="text-red-600 dark:text-red-400">*</span>
+            Full Name <span className="text-danger">*</span>
           </label>
           <input
             id="fullName"
@@ -196,7 +196,7 @@ export default function ContactForm({
             className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
             <Building2 className="w-3.5 h-3.5 text-accent-fg" />
-            Company / Organization <span className="text-red-600 dark:text-red-400">*</span>
+            Company / Organization <span className="text-danger">*</span>
           </label>
           <input
             id="companyName"
@@ -218,7 +218,7 @@ export default function ContactForm({
             className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
             <Mail className="w-3.5 h-3.5 text-accent-fg" />
-            Business Email <span className="text-red-600 dark:text-red-400">*</span>
+            Business Email <span className="text-danger">*</span>
           </label>
           <input
             id="email"
@@ -240,7 +240,7 @@ export default function ContactForm({
             className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
             <Phone className="w-3.5 h-3.5 text-accent-fg" />
-            Direct Contact Number <span className="text-red-600 dark:text-red-400">*</span>
+            Direct Contact Number <span className="text-danger">*</span>
           </label>
           <input
             id="phone"
@@ -263,7 +263,7 @@ export default function ContactForm({
           className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
         >
           <HelpCircle className="w-3.5 h-3.5 text-accent-fg" />
-          Primary Service of Interest <span className="text-red-600 dark:text-red-400">*</span>
+          Primary Service of Interest <span className="text-danger">*</span>
         </label>
         <select
           id="service"
@@ -288,7 +288,7 @@ export default function ContactForm({
           className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
         >
           <MessageSquare className="w-3.5 h-3.5 text-accent-fg" />
-          Project Scope / Headcount Details <span className="text-red-600 dark:text-red-400">*</span>
+          Project Scope / Headcount Details <span className="text-danger">*</span>
         </label>
         <textarea
           id="message"
