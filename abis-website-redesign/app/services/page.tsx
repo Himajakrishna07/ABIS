@@ -119,7 +119,7 @@ export default function ServicesPage() {
                   className="max-h-full w-auto object-contain drop-shadow-xl"
                 />
                 <div className="absolute top-4 left-4">
-                  <span className="px-3 py-1 rounded-full text-xs font-mono bg-black/60 text-on-accent border border-theme/60">
+                  <span className="px-3 py-1 rounded-full text-xs font-mono bg-black/60 text-on-accent on-dark border border-theme/60">
                     {svc.badge}
                   </span>
                 </div>

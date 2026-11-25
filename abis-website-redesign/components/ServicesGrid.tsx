@@ -150,7 +150,7 @@ export default function ServicesGrid() {
                     className="h-full w-auto object-contain transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-3 right-3">
-                    <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-black/60 backdrop-blur-md text-on-accent border border-theme/60">
+                    <span className="px-2.5 py-1 rounded-full text-[11px] font-mono font-medium tracking-wide bg-black/60 backdrop-blur-md text-on-accent on-dark border border-theme/60">
                       {svc.badge}
                     </span>
                   </div>
