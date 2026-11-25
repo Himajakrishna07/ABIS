@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import BackToTop from "@/components/BackToTop";
+import ThemeToggle from "@/components/ThemeToggle";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -78,12 +79,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="dark">
+    <html lang="en" className="dark" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("abis-theme");var r=document.documentElement;if(t==="light"){r.classList.remove("dark");r.classList.add("light");r.style.colorScheme="light";}}catch(e){}`,
+          }}
+        />
+      </head>
       <body className="bg-[#050914] text-[#F1F5F9] antialiased min-h-screen flex flex-col justify-between selection:bg-abis-blue selection:text-white">
         <Navbar />
         <main className="flex-grow">{children}</main>
         <Footer />
         <BackToTop />
+        <ThemeToggle />
       </body>
     </html>
   );
