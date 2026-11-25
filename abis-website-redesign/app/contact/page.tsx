@@ -62,7 +62,7 @@ export default function ContactPage({
   const initialService = searchParams?.service || "";
 
   return (
-    <div className="min-h-screen bg-[#050A18] text-white">
+    <div className="min-h-screen bg-bg text-fg">
       {/* Header */}
       <PageHeader
         badge="Connect With ABIS"
@@ -79,23 +79,23 @@ export default function ContactPage({
             <ContactForm initialService={initialService} />
 
             {/* Career Enquiries Separation Note */}
-            <div className="p-6 rounded-2xl bg-white/[0.02] border border-white/10 flex items-start gap-4">
-              <div className="p-2.5 rounded-xl bg-cyan-500/20 text-cyan-400 shrink-0">
+            <div className="p-6 rounded-2xl bg-fg/5 border border-theme/60 flex items-start gap-4">
+              <div className="p-2.5 rounded-xl bg-cyan-500/20 text-accent-fg shrink-0">
                 <Briefcase className="w-5 h-5" />
               </div>
               <div>
-                <h4 className="text-sm font-bold text-white mb-1">
+                <h4 className="text-sm font-bold text-fg mb-1">
                   Looking for Career Opportunities?
                 </h4>
-                <p className="text-xs text-slate-300 leading-relaxed">
+                <p className="text-xs text-fg-muted leading-relaxed">
                   To ensure rapid processing of job applications, please use our dedicated{" "}
-                  <a href="/careers" className="text-abis-blue hover:underline font-semibold">
+                  <a href="/careers" className="text-accent-fg hover:underline font-semibold">
                     Careers Portal
                   </a>{" "}
                   to apply directly for verified openings, or send your CV directly to{" "}
                   <a
                     href="mailto:hr@akshayaitsolutions.com"
-                    className="text-cyan-400 hover:underline font-mono"
+                    className="text-accent-fg hover:underline font-mono"
                   >
                     hr@akshayaitsolutions.com
                   </a>
@@ -108,13 +108,13 @@ export default function ContactPage({
           {/* Right Column: Verified Office Locations (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <span className="text-xs font-mono uppercase tracking-wider text-abis-blue">
+              <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
                 Verified Physical Presence
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold text-white mt-1">
+              <h2 className="text-2xl sm:text-3xl font-bold text-fg mt-1">
                 Our Office Locations
               </h2>
-              <p className="text-xs text-slate-400 mt-1">
+              <p className="text-xs text-fg-subtle mt-1">
                 Operating across key technology centers in India and North America.
               </p>
             </div>
@@ -123,35 +123,35 @@ export default function ContactPage({
               {officeLocations.map((office, i) => (
                 <div
                   key={i}
-                  className={`p-6 rounded-3xl bg-[#09122C] border ${office.color} shadow-xl space-y-4 relative overflow-hidden`}
+                  className={`p-6 rounded-3xl bg-surface border ${office.color} shadow-xl space-y-4 relative overflow-hidden`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className="text-xs font-mono font-bold text-slate-300 uppercase tracking-wider">
+                    <span className="text-xs font-mono font-bold text-fg-muted uppercase tracking-wider">
                       {office.type}
                     </span>
-                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-white/10 text-white">
+                    <span className="px-2.5 py-1 rounded-full text-[10px] font-mono bg-fg/5 text-fg">
                       {office.badge}
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-lg font-bold text-white flex items-center gap-2">
-                      <Building2 className="w-4 h-4 text-abis-blue" />
+                    <h3 className="text-lg font-bold text-fg flex items-center gap-2">
+                      <Building2 className="w-4 h-4 text-accent-fg" />
                       {office.city}
                     </h3>
-                    <p className="text-xs text-slate-300 leading-relaxed mt-2 flex items-start gap-2">
-                      <MapPin className="w-4 h-4 text-slate-400 shrink-0 mt-0.5" />
+                    <p className="text-xs text-fg-muted leading-relaxed mt-2 flex items-start gap-2">
+                      <MapPin className="w-4 h-4 text-fg-subtle shrink-0 mt-0.5" />
                       <span>{office.address}</span>
                     </p>
                   </div>
 
-                  <div className="pt-3 border-t border-white/5 flex flex-wrap items-center gap-4 text-xs text-slate-300">
+                  <div className="pt-3 border-t border-theme/60 flex flex-wrap items-center gap-4 text-xs text-fg-muted">
                     <div className="flex items-center gap-1.5">
-                      <Phone className="w-3.5 h-3.5 text-abis-blue" />
+                      <Phone className="w-3.5 h-3.5 text-accent-fg" />
                       <span>{office.phone}</span>
                     </div>
                     <div className="flex items-center gap-1.5">
-                      <Mail className="w-3.5 h-3.5 text-cyan-400" />
+                      <Mail className="w-3.5 h-3.5 text-accent-fg" />
                       <span>{office.email}</span>
                     </div>
                   </div>
@@ -160,12 +160,12 @@ export default function ContactPage({
             </div>
 
             {/* Quick Contact Summary Card */}
-            <div className="p-6 rounded-3xl bg-[#081028] border border-white/10 space-y-3">
-              <h4 className="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
-                <Clock className="w-4 h-4 text-abis-blue" />
+            <div className="p-6 rounded-3xl bg-surface border border-theme/60 space-y-3">
+              <h4 className="text-sm font-bold text-fg uppercase tracking-wider flex items-center gap-2">
+                <Clock className="w-4 h-4 text-accent-fg" />
                 Operating Hours &amp; Response SLA
               </h4>
-              <p className="text-xs text-slate-300 leading-relaxed">
+              <p className="text-xs text-fg-muted leading-relaxed">
                 Our delivery teams operate across Indian Standard Time (IST) and Eastern Standard Time (EST) business hours. Client enquiries submitted through the form are typically acknowledged within 24 business hours.
               </p>
             </div>

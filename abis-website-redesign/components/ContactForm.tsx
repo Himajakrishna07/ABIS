@@ -81,15 +81,15 @@ export default function ContactForm({
 
   if (successData) {
     return (
-      <div className="p-8 sm:p-10 rounded-3xl bg-[#091330] border border-emerald-500/30 text-center space-y-5 animate-fade-in">
-        <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
+      <div className="p-8 sm:p-10 rounded-3xl bg-surface border border-emerald-500/30 text-center space-y-5 animate-fade-in">
+        <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mx-auto">
           <CheckCircle2 className="w-9 h-9" />
         </div>
-        <h3 className="text-2xl font-bold text-white">Enquiry Received</h3>
-        <p className="text-sm text-slate-300 max-w-lg mx-auto leading-relaxed">
+        <h3 className="text-2xl font-bold text-fg">Enquiry Received</h3>
+        <p className="text-sm text-fg-muted max-w-lg mx-auto leading-relaxed">
           {successData.message}
         </p>
-        <div className="inline-block px-4 py-2 rounded-xl bg-white/5 border border-white/10 font-mono text-xs text-cyan-400">
+        <div className="inline-block px-4 py-2 rounded-xl bg-fg/5 border border-theme/60 font-mono text-xs text-accent-fg">
           Tracking Reference: {successData.referenceId}
         </div>
         <div className="pt-4">
@@ -107,7 +107,7 @@ export default function ContactForm({
                 message: "",
               });
             }}
-            className="px-6 py-2.5 rounded-xl text-xs font-semibold text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+            className="px-6 py-2.5 rounded-xl text-xs font-semibold text-fg-muted hover:text-fg bg-fg/5 hover:bg-fg/5 border border-theme/60 transition-colors"
           >
             Submit Another Requirement
           </button>
@@ -119,27 +119,27 @@ export default function ContactForm({
   return (
     <form
       onSubmit={handleSubmit}
-      className="p-8 sm:p-10 rounded-3xl bg-[#08112C] border border-white/10 shadow-2xl space-y-6"
+      className="p-8 sm:p-10 rounded-3xl bg-surface border border-theme/60 shadow-2xl space-y-6"
     >
       <div>
-        <h3 className="text-2xl font-bold text-white tracking-tight">
+        <h3 className="text-2xl font-bold text-fg tracking-tight">
           Discuss Your Business Requirements
         </h3>
-        <p className="text-xs text-slate-400 mt-1">
+        <p className="text-xs text-fg-subtle mt-1">
           Complete the form below to connect with our client solutions team in India or the USA.
         </p>
       </div>
 
       {errorMessage && (
         <div className="p-4 rounded-2xl bg-rose-500/10 border border-rose-500/30 flex items-start gap-3 text-xs text-rose-300">
-          <AlertCircle className="w-5 h-5 shrink-0 text-rose-400" />
+          <AlertCircle className="w-5 h-5 shrink-0 text-red-600 dark:text-red-400" />
           <span>{errorMessage}</span>
         </div>
       )}
 
       {/* Enquiry Type Selector */}
       <div className="space-y-2">
-        <label className="text-xs font-semibold uppercase tracking-wider text-slate-300">
+        <label className="text-xs font-semibold uppercase tracking-wider text-fg-muted">
           Enquiry Nature
         </label>
         <div className="grid grid-cols-3 gap-2">
@@ -156,8 +156,8 @@ export default function ContactForm({
               }
               className={`py-2.5 px-3 rounded-xl text-xs font-medium border text-center transition-all ${
                 formData.enquiryType === type.id
-                  ? "bg-abis-blue text-white border-abis-blue shadow-md"
-                  : "bg-white/[0.03] text-slate-400 border-white/10 hover:border-white/20 hover:text-white"
+                  ? "bg-abis-blue text-on-accent border-abis-blue shadow-md"
+                  : "bg-fg/5 text-fg-subtle border-theme/60 hover:border-theme/60 hover:text-fg"
               }`}
             >
               {type.label}
@@ -171,10 +171,10 @@ export default function ContactForm({
         <div className="space-y-1.5">
           <label
             htmlFor="fullName"
-            className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+            className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
-            <User className="w-3.5 h-3.5 text-abis-blue" />
-            Full Name <span className="text-rose-400">*</span>
+            <User className="w-3.5 h-3.5 text-accent-fg" />
+            Full Name <span className="text-red-600 dark:text-red-400">*</span>
           </label>
           <input
             id="fullName"
@@ -185,7 +185,7 @@ export default function ContactForm({
               setFormData({ ...formData, fullName: e.target.value })
             }
             placeholder="John Doe"
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 focus:border-abis-blue focus:bg-white/[0.07] outline-none text-sm text-white placeholder-slate-500 transition-colors"
+            className="w-full px-4 py-3 rounded-xl bg-fg/5 border border-theme/60 focus:border-abis-blue focus:bg-fg/5 outline-none text-sm text-fg placeholder-fg-subtle transition-colors"
           />
         </div>
 
@@ -193,10 +193,10 @@ export default function ContactForm({
         <div className="space-y-1.5">
           <label
             htmlFor="companyName"
-            className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+            className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
-            <Building2 className="w-3.5 h-3.5 text-abis-blue" />
-            Company / Organization <span className="text-rose-400">*</span>
+            <Building2 className="w-3.5 h-3.5 text-accent-fg" />
+            Company / Organization <span className="text-red-600 dark:text-red-400">*</span>
           </label>
           <input
             id="companyName"
@@ -207,7 +207,7 @@ export default function ContactForm({
               setFormData({ ...formData, companyName: e.target.value })
             }
             placeholder="Acme Technologies"
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 focus:border-abis-blue focus:bg-white/[0.07] outline-none text-sm text-white placeholder-slate-500 transition-colors"
+            className="w-full px-4 py-3 rounded-xl bg-fg/5 border border-theme/60 focus:border-abis-blue focus:bg-fg/5 outline-none text-sm text-fg placeholder-fg-subtle transition-colors"
           />
         </div>
 
@@ -215,10 +215,10 @@ export default function ContactForm({
         <div className="space-y-1.5">
           <label
             htmlFor="email"
-            className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+            className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
-            <Mail className="w-3.5 h-3.5 text-abis-blue" />
-            Business Email <span className="text-rose-400">*</span>
+            <Mail className="w-3.5 h-3.5 text-accent-fg" />
+            Business Email <span className="text-red-600 dark:text-red-400">*</span>
           </label>
           <input
             id="email"
@@ -229,7 +229,7 @@ export default function ContactForm({
               setFormData({ ...formData, email: e.target.value })
             }
             placeholder="john@company.com"
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 focus:border-abis-blue focus:bg-white/[0.07] outline-none text-sm text-white placeholder-slate-500 transition-colors"
+            className="w-full px-4 py-3 rounded-xl bg-fg/5 border border-theme/60 focus:border-abis-blue focus:bg-fg/5 outline-none text-sm text-fg placeholder-fg-subtle transition-colors"
           />
         </div>
 
@@ -237,10 +237,10 @@ export default function ContactForm({
         <div className="space-y-1.5">
           <label
             htmlFor="phone"
-            className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+            className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
           >
-            <Phone className="w-3.5 h-3.5 text-abis-blue" />
-            Direct Contact Number <span className="text-rose-400">*</span>
+            <Phone className="w-3.5 h-3.5 text-accent-fg" />
+            Direct Contact Number <span className="text-red-600 dark:text-red-400">*</span>
           </label>
           <input
             id="phone"
@@ -251,7 +251,7 @@ export default function ContactForm({
               setFormData({ ...formData, phone: e.target.value })
             }
             placeholder="+1 (555) 000-0000 / +91 ..."
-            className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 focus:border-abis-blue focus:bg-white/[0.07] outline-none text-sm text-white placeholder-slate-500 transition-colors"
+            className="w-full px-4 py-3 rounded-xl bg-fg/5 border border-theme/60 focus:border-abis-blue focus:bg-fg/5 outline-none text-sm text-fg placeholder-fg-subtle transition-colors"
           />
         </div>
       </div>
@@ -260,10 +260,10 @@ export default function ContactForm({
       <div className="space-y-1.5">
         <label
           htmlFor="service"
-          className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+          className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
         >
-          <HelpCircle className="w-3.5 h-3.5 text-abis-blue" />
-          Primary Service of Interest <span className="text-rose-400">*</span>
+          <HelpCircle className="w-3.5 h-3.5 text-accent-fg" />
+          Primary Service of Interest <span className="text-red-600 dark:text-red-400">*</span>
         </label>
         <select
           id="service"
@@ -271,10 +271,10 @@ export default function ContactForm({
           onChange={(e) =>
             setFormData({ ...formData, service: e.target.value })
           }
-          className="w-full px-4 py-3 rounded-xl bg-[#0B1536] border border-white/10 focus:border-abis-blue outline-none text-sm text-white transition-colors cursor-pointer"
+          className="w-full px-4 py-3 rounded-xl bg-surface border border-theme/60 focus:border-abis-blue outline-none text-sm text-fg transition-colors cursor-pointer"
         >
           {servicesOptions.map((opt, i) => (
-            <option key={i} value={opt} className="bg-[#0B1536] text-white">
+            <option key={i} value={opt} className="bg-surface text-fg">
               {opt}
             </option>
           ))}
@@ -285,10 +285,10 @@ export default function ContactForm({
       <div className="space-y-1.5">
         <label
           htmlFor="message"
-          className="text-xs font-medium text-slate-300 flex items-center gap-1.5"
+          className="text-xs font-medium text-fg-muted flex items-center gap-1.5"
         >
-          <MessageSquare className="w-3.5 h-3.5 text-abis-blue" />
-          Project Scope / Headcount Details <span className="text-rose-400">*</span>
+          <MessageSquare className="w-3.5 h-3.5 text-accent-fg" />
+          Project Scope / Headcount Details <span className="text-red-600 dark:text-red-400">*</span>
         </label>
         <textarea
           id="message"
@@ -299,7 +299,7 @@ export default function ContactForm({
             setFormData({ ...formData, message: e.target.value })
           }
           placeholder="Briefly describe your requirements, timeline, target technical skills, or location preferences..."
-          className="w-full px-4 py-3 rounded-xl bg-white/[0.04] border border-white/10 focus:border-abis-blue focus:bg-white/[0.07] outline-none text-sm text-white placeholder-slate-500 transition-colors resize-none"
+          className="w-full px-4 py-3 rounded-xl bg-fg/5 border border-theme/60 focus:border-abis-blue focus:bg-fg/5 outline-none text-sm text-fg placeholder-fg-subtle transition-colors resize-none"
         />
       </div>
 
@@ -307,7 +307,7 @@ export default function ContactForm({
       <button
         type="submit"
         disabled={loading}
-        className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold text-sm text-white bg-abis-blue hover:bg-abis-blue-hover disabled:opacity-50 transition-all duration-300 shadow-[0_4px_25px_rgba(32,109,247,0.4)]"
+        className="w-full inline-flex items-center justify-center gap-2 py-4 px-6 rounded-xl font-semibold text-sm text-on-accent bg-abis-blue hover:bg-abis-blue-hover disabled:opacity-50 transition-all duration-300 shadow-[0_4px_25px_rgba(32,109,247,0.4)]"
       >
         {loading ? (
           <>
@@ -322,9 +322,9 @@ export default function ContactForm({
         )}
       </button>
 
-      <p className="text-[11px] text-slate-400 text-center leading-relaxed">
+      <p className="text-[11px] text-fg-subtle text-center leading-relaxed">
         Looking for career opportunities? Please visit our{" "}
-        <a href="/careers" className="text-abis-blue hover:underline">
+        <a href="/careers" className="text-accent-fg hover:underline">
           Careers Portal
         </a>{" "}
         or submit your CV to hr@akshayaitsolutions.com.

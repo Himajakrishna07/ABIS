@@ -33,20 +33,20 @@ const clientLogosRow2 = [
 
 export default function ClientLogoCarousel() {
   return (
-    <section className="py-20 bg-[#040816] border-y border-white/10 relative overflow-hidden">
+    <section className="py-20 bg-bg border-y border-theme/60 relative overflow-hidden">
       {/* Soft gradient edge fade masks */}
-      <div className="absolute top-0 bottom-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-[#040816] to-transparent z-20 pointer-events-none" />
-      <div className="absolute top-0 bottom-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-[#040816] to-transparent z-20 pointer-events-none" />
+      <div className="client-carousel-mask-left absolute top-0 bottom-0 left-0 w-24 sm:w-48 bg-gradient-to-r from-bg-alt to-transparent z-20 pointer-events-none" />
+      <div className="client-carousel-mask-right absolute top-0 bottom-0 right-0 w-24 sm:w-48 bg-gradient-to-l from-bg-alt to-transparent z-20 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 mb-12 text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-xs font-semibold text-slate-300 uppercase tracking-wider mb-3">
-          <ShieldCheck className="w-3.5 h-3.5 text-abis-blue" />
+        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-fg/5 border border-theme/60 text-xs font-semibold text-fg-muted uppercase tracking-wider mb-3">
+          <ShieldCheck className="w-3.5 h-3.5 text-accent-fg" />
           <span>Verified Client Partnerships</span>
         </div>
-        <h2 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+        <h2 className="text-2xl sm:text-3xl font-extrabold text-fg tracking-tight">
           Trusted by Industry Leaders &amp; Global Enterprises
         </h2>
-        <p className="text-xs sm:text-sm text-slate-400 mt-2 max-w-2xl mx-auto">
+        <p className="text-xs sm:text-sm text-fg-subtle mt-2 max-w-2xl mx-auto">
           Over our 20+ year journey, we have had the privilege of powering workforce and technology initiatives for renowned Fortune 500 multinationals and market champions.
         </p>
       </div>
@@ -57,7 +57,7 @@ export default function ClientLogoCarousel() {
           {[...clientLogosRow1, ...clientLogosRow1].map((logo, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center h-20 w-44 px-5 rounded-2xl bg-white/95 border border-white/20 shadow-md hover:scale-105 transition-transform duration-200"
+              className="client-logo-card flex items-center justify-center h-20 w-44 px-5 rounded-2xl bg-surface border border-theme/60 shadow-md hover:scale-105 transition-transform duration-200"
             >
               <Image
                 src={logo.src}
@@ -77,7 +77,7 @@ export default function ClientLogoCarousel() {
           {[...clientLogosRow2, ...clientLogosRow2].map((logo, idx) => (
             <div
               key={idx}
-              className="flex items-center justify-center h-20 w-44 px-5 rounded-2xl bg-white/95 border border-white/20 shadow-md hover:scale-105 transition-transform duration-200"
+              className="client-logo-card flex items-center justify-center h-20 w-44 px-5 rounded-2xl bg-surface border border-theme/60 shadow-md hover:scale-105 transition-transform duration-200"
             >
               <Image
                 src={logo.src}

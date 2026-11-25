@@ -90,7 +90,7 @@ const galleryPhotos = [
 
 export default function LifeAtAbisPage() {
   return (
-    <div className="min-h-screen bg-[#050A18] text-white">
+    <div className="min-h-screen bg-bg text-fg">
       {/* Header */}
       <PageHeader
         badge="Company Culture & Values"
@@ -103,35 +103,35 @@ export default function LifeAtAbisPage() {
       <section className="py-24 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
           <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-wider">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-700 dark:text-emerald-400 text-xs font-semibold uppercase tracking-wider">
               <Heart className="w-3.5 h-3.5" />
               <span>People First Philosophy</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight leading-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-fg tracking-tight leading-tight">
               Invested in Your Growth,{" "}
               <span className="text-gradient-cyan">Committed to Your Success.</span>
             </h2>
 
-            <p className="text-base text-slate-300 leading-relaxed">
+            <p className="text-base text-fg-muted leading-relaxed">
               We are committed to attracting and retaining exceptional talent by following practices that ensure each team member builds a fruitful and rewarding career with us. We strive to create a vibrant and open environment that is employee-friendly, supportive, and socially responsible.
             </p>
 
-            <p className="text-sm text-slate-400 leading-relaxed">
+            <p className="text-sm text-fg-subtle leading-relaxed">
               Our culture provides opportunities for constant learning and growth, grounded firmly in performance, fairness, and meritocracy. We challenge you to perform to the best of your ability — and provide the mentorship, tooling, and autonomy you need to excel.
             </p>
 
             <div className="pt-4 flex flex-wrap items-center gap-4">
               <Link
                 href="/careers"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-xs text-white bg-abis-blue hover:bg-abis-blue-hover transition-colors shadow-lg"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-xs text-on-accent bg-abis-blue hover:bg-abis-blue-hover transition-colors shadow-lg"
               >
                 <span>Explore Open Opportunities</span>
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
                 href="/contact"
-                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-xs text-slate-300 hover:text-white bg-white/5 hover:bg-white/10 border border-white/10 transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-semibold text-xs text-fg-muted hover:text-fg bg-fg/5 hover:bg-fg/5 border border-theme/60 transition-colors"
               >
                 <span>Connect with Our HR Team</span>
               </Link>
@@ -140,28 +140,28 @@ export default function LifeAtAbisPage() {
 
           {/* Core Commitments Box */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="p-8 rounded-3xl bg-gradient-to-b from-[#091438] to-[#070D24] border border-white/15 shadow-2xl space-y-6">
-              <span className="text-xs font-mono uppercase tracking-wider text-cyan-400">
+            <div className="p-8 rounded-3xl bg-gradient-to-b from-surface to-bg-alt border border-theme/60 shadow-2xl space-y-6">
+              <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
                 Our Two-Fold Commitment
               </span>
 
               <div className="space-y-4">
-                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-2">
-                  <h3 className="text-base font-bold text-white flex items-center gap-2">
-                    <Target className="w-4 h-4 text-abis-blue" />
+                <div className="p-4 rounded-2xl bg-fg/5 border border-theme/60 space-y-2">
+                  <h3 className="text-base font-bold text-fg flex items-center gap-2">
+                    <Target className="w-4 h-4 text-accent-fg" />
                     Commitment to Our Team
                   </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed italic">
+                  <p className="text-xs text-fg-muted leading-relaxed italic">
                     &ldquo;We want the best people and we invest in your development. We challenge you to perform to the best of your ability.&rdquo;
                   </p>
                 </div>
 
-                <div className="p-4 rounded-2xl bg-white/[0.03] border border-white/5 space-y-2">
-                  <h3 className="text-base font-bold text-white flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-cyan-400" />
+                <div className="p-4 rounded-2xl bg-fg/5 border border-theme/60 space-y-2">
+                  <h3 className="text-base font-bold text-fg flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-accent-fg" />
                     Culture of High Achievement
                   </h3>
-                  <p className="text-xs text-slate-300 leading-relaxed italic">
+                  <p className="text-xs text-fg-muted leading-relaxed italic">
                     &ldquo;We challenge you to push yourself to great heights. We give you challenging opportunities to shine.&rdquo;
                   </p>
                 </div>
@@ -172,13 +172,13 @@ export default function LifeAtAbisPage() {
       </section>
 
       {/* Culture Pillars Grid */}
-      <section className="py-20 bg-[#040816] border-y border-white/10">
+      <section className="py-20 bg-bg border-y border-theme/60">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-abis-blue">
+            <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
               What Defines Us
             </span>
-            <h2 className="text-3xl font-extrabold text-white">
+            <h2 className="text-3xl font-extrabold text-fg">
               The Four Pillars of Life at ABIS
             </h2>
           </div>
@@ -189,15 +189,15 @@ export default function LifeAtAbisPage() {
               return (
                 <div
                   key={i}
-                  className="p-6 rounded-2xl bg-[#09122C] border border-white/10 hover:border-abis-blue/40 transition-all duration-300 space-y-4"
+                  className="p-6 rounded-2xl bg-surface border border-theme/60 hover:border-abis-blue/40 transition-all duration-300 space-y-4"
                 >
-                  <div className="p-3 rounded-xl bg-white/[0.04] text-abis-blue w-fit">
+                  <div className="p-3 rounded-xl bg-fg/5 text-accent-fg w-fit">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-base font-bold text-white">
+                  <h3 className="text-base font-bold text-fg">
                     {pillar.title}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-fg-subtle leading-relaxed">
                     {pillar.desc}
                   </p>
                 </div>
@@ -210,13 +210,13 @@ export default function LifeAtAbisPage() {
       {/* Authentic Photo Gallery Showcase */}
       <section className="py-24 max-w-7xl mx-auto px-6 space-y-12">
         <div className="text-center max-w-3xl mx-auto space-y-3">
-          <span className="text-xs font-mono uppercase tracking-wider text-cyan-400">
+          <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
             Real Moments &amp; Workspaces
           </span>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-fg">
             Inside the ABIS Workplace
           </h2>
-          <p className="text-xs sm:text-sm text-slate-400">
+          <p className="text-xs sm:text-sm text-fg-subtle">
             Real corporate photography showcasing our high-energy workspaces across Hyderabad and Bengaluru.
           </p>
         </div>
@@ -225,7 +225,7 @@ export default function LifeAtAbisPage() {
           {galleryPhotos.map((photo, idx) => (
             <div
               key={idx}
-              className={`relative rounded-3xl overflow-hidden border border-white/10 shadow-2xl group ${photo.span}`}
+              className={`relative rounded-3xl overflow-hidden border border-theme/60 shadow-2xl group ${photo.span}`}
             >
               <div className={`relative w-full ${photo.height}`}>
                 <Image
@@ -234,12 +234,12 @@ export default function LifeAtAbisPage() {
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                <div className="absolute bottom-5 left-5 right-5 space-y-1">
-                  <h4 className="text-base font-bold text-white">
+                <div className="absolute inset-0 bg-gradient-to-t from-[rgb(var(--overlay)/0.80)] via-[rgb(var(--overlay)/0.20)] to-transparent" />
+                <div className="absolute bottom-5 left-5 right-5 space-y-1 on-dark">
+                  <h4 className="text-base font-bold text-fg">
                     {photo.title}
                   </h4>
-                  <p className="text-xs text-slate-300">
+                  <p className="text-xs text-fg-muted">
                     {photo.subtitle}
                   </p>
                 </div>

@@ -39,22 +39,22 @@ const industries = [
 
 export default function IndustryEcosystem() {
   return (
-    <section className="py-24 bg-[#050A18] relative overflow-hidden">
+    <section className="py-24 bg-bg relative overflow-hidden">
       {/* Background glow */}
       <div className="absolute top-1/2 right-1/4 w-96 h-96 bg-cyan-500/10 rounded-full blur-[140px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-accent-fg text-xs font-semibold uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>Cross-Vertical Domain Mastery</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-fg tracking-tight">
             Industries We <span className="text-gradient-cyan">Serve &amp; Empower.</span>
           </h2>
 
-          <p className="text-base text-slate-300 leading-relaxed">
+          <p className="text-base text-fg-muted leading-relaxed">
             From high-complexity semiconductor and embedded architectures to enterprise BFSI and cloud software, our vertical specialization guarantees immediate technical context and alignment.
           </p>
         </div>
@@ -66,16 +66,16 @@ export default function IndustryEcosystem() {
             return (
               <div
                 key={i}
-                className="group p-5 rounded-2xl bg-[#09112A] hover:bg-[#0E1B42] border border-white/5 hover:border-abis-blue/40 transition-all duration-200 flex flex-col justify-between"
+                className="group p-5 rounded-2xl bg-surface hover:bg-surface-2 border border-theme/60 hover:border-abis-blue/40 transition-all duration-200 flex flex-col justify-between"
               >
                 <div>
-                  <div className="p-3 rounded-xl bg-white/[0.04] text-abis-blue group-hover:text-cyan-400 group-hover:bg-cyan-500/10 transition-colors w-fit mb-3">
+                  <div className="p-3 rounded-xl bg-fg/5 text-accent-fg group-hover:text-accent-fg group-hover:bg-cyan-500/10 transition-colors w-fit mb-3">
                     <Icon className="w-5 h-5" />
                   </div>
-                  <h3 className="text-sm font-bold text-white group-hover:text-white transition-colors mb-1">
+                  <h3 className="text-sm font-bold text-fg group-hover:text-fg transition-colors mb-1">
                     {ind.name}
                   </h3>
-                  <p className="text-xs text-slate-400 leading-relaxed">
+                  <p className="text-xs text-fg-subtle leading-relaxed">
                     {ind.desc}
                   </p>
                 </div>
@@ -85,9 +85,9 @@ export default function IndustryEcosystem() {
         </div>
 
         {/* Enterprise Notice */}
-        <div className="mt-12 p-6 rounded-2xl bg-white/[0.02] border border-white/10 text-center max-w-3xl mx-auto">
-          <p className="text-xs text-slate-300 leading-relaxed">
-            <strong className="text-white font-semibold">Domain-Focused Sourcing:</strong> Each industry vertical is supported by dedicated talent advisors who understand the specific tooling, regulatory compliance, and technical jargon required for zero-ramp execution.
+        <div className="mt-12 p-6 rounded-2xl bg-fg/5 border border-theme/60 text-center max-w-3xl mx-auto">
+          <p className="text-xs text-fg-muted leading-relaxed">
+            <strong className="text-fg font-semibold">Domain-Focused Sourcing:</strong> Each industry vertical is supported by dedicated talent advisors who understand the specific tooling, regulatory compliance, and technical jargon required for zero-ramp execution.
           </p>
         </div>
       </div>

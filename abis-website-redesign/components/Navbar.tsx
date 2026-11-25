@@ -26,14 +26,14 @@ const servicesList = [
     href: "/services/permanent-recruitment",
     desc: "End-to-end recruitment cycle mastery for specialized roles",
     icon: Users,
-    color: "text-blue-400",
+    color: "text-accent-fg",
   },
   {
     title: "Contract Staffing",
     href: "/services/contract-staffing",
     desc: "Agile, scalable tech talent for rapid project delivery",
     icon: Briefcase,
-    color: "text-cyan-400",
+    color: "text-accent-fg",
   },
   {
     title: "Executive Search & RPO",
@@ -47,7 +47,7 @@ const servicesList = [
     href: "/services/corporate-training",
     desc: "Upskilling and capability building for enterprise teams",
     icon: GraduationCap,
-    color: "text-emerald-400",
+    color: "text-emerald-700 dark:text-emerald-400",
   },
   {
     title: "HR Services",
@@ -98,27 +98,27 @@ export default function Navbar() {
   return (
     <>
       {/* Top subtle utility strip */}
-      <div className="bg-[#040714] border-b border-white/5 text-xs text-slate-400 hidden lg:block">
+      <div className="bg-bg-alt border-b border-theme/60 text-xs text-fg-subtle hidden lg:block">
         <div className="max-w-7xl mx-auto px-6 py-2 flex items-center justify-between">
           <div className="flex items-center gap-6">
-            <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors">
-              <MapPin className="w-3.5 h-3.5 text-abis-blue" />
+            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+              <MapPin className="w-3.5 h-3.5 text-accent-fg" />
               Hyderabad &bull; Bengaluru &bull; New Jersey (USA)
             </span>
-            <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors">
-              <Phone className="w-3.5 h-3.5 text-abis-blue" />
+            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+              <Phone className="w-3.5 h-3.5 text-accent-fg" />
               040-48546345
             </span>
-            <span className="flex items-center gap-1.5 hover:text-slate-200 transition-colors">
-              <Mail className="w-3.5 h-3.5 text-abis-blue" />
+            <span className="flex items-center gap-1.5 hover:text-fg transition-colors">
+              <Mail className="w-3.5 h-3.5 text-accent-fg" />
               hr@akshayaitsolutions.com
             </span>
           </div>
           <div className="flex items-center gap-4 text-[11px] font-medium tracking-wide">
-            <span className="px-2 py-0.5 rounded-full bg-abis-blue/10 border border-abis-blue/30 text-abis-blue">
+            <span className="px-2 py-0.5 rounded-full bg-abis-blue/10 border border-abis-blue/30 text-accent-fg">
               20+ Years Industry Excellence
             </span>
-            <span className="text-slate-400">Trusted by Fortune 500 & Leading MNCs</span>
+            <span className="text-fg-subtle">Trusted by Fortune 500 & Leading MNCs</span>
           </div>
         </div>
       </div>
@@ -127,8 +127,8 @@ export default function Navbar() {
       <header
         className={`sticky top-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-[#070C1E]/95 backdrop-blur-md border-b border-white/10 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] py-3.5"
-            : "bg-[#070C1E]/80 backdrop-blur-sm border-b border-white/5 py-4"
+            ? "bg-bg-alt/95 backdrop-blur-md border-b border-theme/60 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] py-3.5"
+            : "bg-bg-alt/80 backdrop-blur-sm border-b border-theme/60 py-4"
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
@@ -141,8 +141,8 @@ export default function Navbar() {
               href="/"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold shadow-[0_0_15px_rgba(32,109,247,0.15)]"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold shadow-[0_0_15px_rgba(32,109,247,0.15)]"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Home
@@ -152,8 +152,8 @@ export default function Navbar() {
               href="/who-we-are"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/who-we-are")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Who We Are
@@ -169,22 +169,22 @@ export default function Navbar() {
                 type="button"
                 className={`flex items-center gap-1.5 px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                   pathname.startsWith("/services")
-                    ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                    : "text-slate-300 hover:text-white hover:bg-white/5"
+                    ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                    : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
                 aria-expanded={servicesOpen}
               >
                 <span>Services</span>
                 <ChevronDown
                   className={`w-4 h-4 transition-transform duration-200 ${
-                    servicesOpen ? "rotate-180 text-abis-blue" : "text-slate-400"
+                    servicesOpen ? "rotate-180 text-accent-fg" : "text-fg-subtle"
                   }`}
                 />
               </button>
 
               {/* Dropdown Menu */}
               {servicesOpen && (
-                <div className="absolute top-full left-0 mt-2 w-[580px] bg-[#0A1128] border border-white/10 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] p-4 backdrop-blur-2xl animate-fade-in z-50">
+                <div className="absolute top-full left-0 mt-2 w-[580px] bg-surface border border-theme/60 rounded-2xl shadow-[0_25px_60px_-15px_rgba(0,0,0,0.8)] p-4 backdrop-blur-2xl animate-fade-in z-50">
                   <div className="grid grid-cols-2 gap-2">
                     {servicesList.map((svc) => {
                       const Icon = svc.icon;
@@ -192,16 +192,16 @@ export default function Navbar() {
                         <Link
                           key={svc.href}
                           href={svc.href}
-                          className="group p-3 rounded-xl hover:bg-white/[0.06] border border-transparent hover:border-white/10 transition-all flex items-start gap-3"
+                          className="group p-3 rounded-xl hover:bg-fg/5 border border-transparent hover:border-theme/60 transition-all flex items-start gap-3"
                         >
-                          <div className="p-2.5 rounded-lg bg-white/[0.04] group-hover:bg-abis-blue/20 transition-colors">
+                          <div className="p-2.5 rounded-lg bg-fg/5 group-hover:bg-abis-blue/20 transition-colors">
                             <Icon className={`w-5 h-5 ${svc.color}`} />
                           </div>
                           <div>
-                            <div className="text-sm font-semibold text-white group-hover:text-abis-blue transition-colors flex items-center gap-1">
+                            <div className="text-sm font-semibold text-fg group-hover:text-accent-fg transition-colors flex items-center gap-1">
                               {svc.title}
                             </div>
-                            <p className="text-xs text-slate-400 line-clamp-2 mt-0.5 leading-relaxed">
+                            <p className="text-xs text-fg-subtle line-clamp-2 mt-0.5 leading-relaxed">
                               {svc.desc}
                             </p>
                           </div>
@@ -210,11 +210,11 @@ export default function Navbar() {
                     })}
                   </div>
 
-                  <div className="mt-3 pt-3 border-t border-white/10 flex items-center justify-between px-2 text-xs">
-                    <span className="text-slate-400">Looking for all consulting capabilities?</span>
+                  <div className="mt-3 pt-3 border-t border-theme/60 flex items-center justify-between px-2 text-xs">
+                    <span className="text-fg-subtle">Looking for all consulting capabilities?</span>
                     <Link
                       href="/services"
-                      className="text-abis-blue hover:text-sky-300 font-semibold flex items-center gap-1 hover:gap-1.5 transition-all"
+                      className="text-accent-fg hover:text-accent-fg font-semibold flex items-center gap-1 hover:gap-1.5 transition-all"
                     >
                       All Services Directory <ArrowRight className="w-3.5 h-3.5" />
                     </Link>
@@ -227,8 +227,8 @@ export default function Navbar() {
               href="/business-practices"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/business-practices")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Business Practices
@@ -238,8 +238,8 @@ export default function Navbar() {
               href="/life-at-abis"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/life-at-abis")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Life at ABIS
@@ -249,8 +249,8 @@ export default function Navbar() {
               href="/careers"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/careers")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Careers
@@ -260,8 +260,8 @@ export default function Navbar() {
               href="/contact"
               className={`px-3.5 py-2 text-sm font-medium rounded-lg transition-all duration-200 ${
                 isActive("/contact")
-                  ? "text-white bg-abis-blue/15 border border-abis-blue/30 font-semibold"
-                  : "text-slate-300 hover:text-white hover:bg-white/5"
+                  ? "text-accent-fg bg-abis-blue/15 border border-abis-blue/30 font-semibold"
+                  : "text-fg-muted hover:text-fg-muted hover:text-fg hover:bg-fg/5"
               }`}
             >
               Contact Us
@@ -272,7 +272,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="relative group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-white bg-abis-blue hover:bg-abis-blue-hover transition-all duration-300 shadow-[0_4px_20px_rgba(32,109,247,0.35)] hover:shadow-[0_6px_25px_rgba(32,109,247,0.55)] active:scale-[0.98]"
+              className="relative group inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl font-semibold text-sm text-on-accent bg-abis-blue hover:bg-abis-blue-hover transition-all duration-300 shadow-[0_4px_20px_rgba(32,109,247,0.35)] hover:shadow-[0_6px_25px_rgba(32,109,247,0.55)] active:scale-[0.98]"
             >
               <span>Partner With Us</span>
               <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5" />
@@ -283,7 +283,7 @@ export default function Navbar() {
           <button
             type="button"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="xl:hidden p-2 rounded-xl text-slate-300 hover:text-white hover:bg-white/10 transition-colors"
+            className="xl:hidden p-2 rounded-xl text-fg-muted hover:text-fg hover:bg-fg/5 transition-colors"
             aria-label="Toggle navigation menu"
           >
             {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -292,12 +292,12 @@ export default function Navbar() {
 
         {/* Mobile Navigation Drawer */}
         {mobileMenuOpen && (
-          <div className="xl:hidden bg-[#070C1E] border-b border-white/10 px-6 py-6 animate-fade-in max-h-[85vh] overflow-y-auto">
+          <div className="xl:hidden bg-bg-alt border-b border-theme/60 px-6 py-6 animate-fade-in max-h-[85vh] overflow-y-auto">
             <nav className="flex flex-col gap-2">
               <Link
                 href="/"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
-                  isActive("/") ? "bg-abis-blue text-white" : "text-slate-200 hover:bg-white/5"
+                  isActive("/") ? "bg-abis-blue text-on-accent" : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Home
@@ -306,36 +306,36 @@ export default function Navbar() {
                 href="/who-we-are"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/who-we-are")
-                    ? "bg-abis-blue text-white"
-                    : "text-slate-200 hover:bg-white/5"
+                    ? "bg-abis-blue text-on-accent"
+                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Who We Are
               </Link>
 
               {/* Mobile Services Accordion */}
-              <div className="border border-white/10 rounded-xl overflow-hidden my-1">
+              <div className="border border-theme/60 rounded-xl overflow-hidden my-1">
                 <button
                   type="button"
                   onClick={() => setServicesOpen(!servicesOpen)}
-                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-slate-200 bg-white/[0.02]"
+                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-fg bg-fg/5"
                 >
                   <span className="flex items-center gap-2">
-                    <Briefcase className="w-4 h-4 text-abis-blue" />
+                    <Briefcase className="w-4 h-4 text-accent-fg" />
                     Services
                   </span>
                   <ChevronDown
                     className={`w-4 h-4 transition-transform ${
-                      servicesOpen ? "rotate-180 text-abis-blue" : ""
+                      servicesOpen ? "rotate-180 text-accent-fg" : ""
                     }`}
                   />
                 </button>
 
                 {servicesOpen && (
-                  <div className="px-3 py-2 bg-black/30 flex flex-col gap-1 border-t border-white/5">
+                  <div className="px-3 py-2 bg-black/30 flex flex-col gap-1 border-t border-theme/60">
                     <Link
                       href="/services"
-                      className="px-3 py-2 text-sm font-semibold text-abis-blue flex items-center justify-between hover:bg-white/5 rounded-lg"
+                      className="px-3 py-2 text-sm font-semibold text-accent-fg flex items-center justify-between hover:bg-fg/5 rounded-lg"
                     >
                       <span>Overview Directory</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -344,7 +344,7 @@ export default function Navbar() {
                       <Link
                         key={svc.href}
                         href={svc.href}
-                        className="px-3 py-2 text-sm text-slate-300 hover:text-white hover:bg-white/5 rounded-lg"
+                        className="px-3 py-2 text-sm text-fg-muted hover:text-fg hover:bg-fg/5 rounded-lg"
                       >
                         {svc.title}
                       </Link>
@@ -357,8 +357,8 @@ export default function Navbar() {
                 href="/business-practices"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/business-practices")
-                    ? "bg-abis-blue text-white"
-                    : "text-slate-200 hover:bg-white/5"
+                    ? "bg-abis-blue text-on-accent"
+                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Business Practices
@@ -368,8 +368,8 @@ export default function Navbar() {
                 href="/life-at-abis"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/life-at-abis")
-                    ? "bg-abis-blue text-white"
-                    : "text-slate-200 hover:bg-white/5"
+                    ? "bg-abis-blue text-on-accent"
+                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Life at ABIS
@@ -379,8 +379,8 @@ export default function Navbar() {
                 href="/careers"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/careers")
-                    ? "bg-abis-blue text-white"
-                    : "text-slate-200 hover:bg-white/5"
+                    ? "bg-abis-blue text-on-accent"
+                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Careers
@@ -390,17 +390,17 @@ export default function Navbar() {
                 href="/contact"
                 className={`px-4 py-2.5 rounded-lg text-base font-medium ${
                   isActive("/contact")
-                    ? "bg-abis-blue text-white"
-                    : "text-slate-200 hover:bg-white/5"
+                    ? "bg-abis-blue text-on-accent"
+                    : "text-fg-muted hover:text-fg hover:bg-fg/5"
                 }`}
               >
                 Contact Us
               </Link>
 
-              <div className="pt-4 border-t border-white/10 mt-2">
+              <div className="pt-4 border-t border-theme/60 mt-2">
                 <Link
                   href="/contact"
-                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-white bg-abis-blue shadow-lg"
+                  className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-semibold text-on-accent bg-abis-blue shadow-lg"
                 >
                   <span>Partner With Us</span>
                   <ArrowRight className="w-4 h-4" />

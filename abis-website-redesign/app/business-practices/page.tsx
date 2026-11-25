@@ -71,7 +71,7 @@ const practices = [
 
 export default function BusinessPracticesPage() {
   return (
-    <div className="min-h-screen bg-[#050A18] text-white">
+    <div className="min-h-screen bg-bg text-fg">
       {/* Header */}
       <PageHeader
         badge="Professional Standards"
@@ -85,15 +85,15 @@ export default function BusinessPracticesPage() {
 
       {/* Core Philosophy Banner */}
       <section className="py-20 max-w-7xl mx-auto px-6">
-        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-[#091330] to-[#070D24] border border-abis-blue/30 shadow-2xl relative overflow-hidden">
+        <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-r from-surface to-bg-alt border border-abis-blue/30 shadow-2xl relative overflow-hidden">
           <div className="max-w-3xl space-y-4">
-            <span className="text-xs font-mono uppercase tracking-wider text-cyan-400">
+            <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
               Foundational Philosophy
             </span>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-fg">
               &ldquo;We believe in maintaining long-standing relationships with our clients and working as an Extended Partner.&rdquo;
             </h2>
-            <p className="text-sm text-slate-300 leading-relaxed">
+            <p className="text-sm text-fg-muted leading-relaxed">
               In an industry often characterized by speed at the expense of substance, ABIS has earned the sustained trust of Fortune 500 multinationals and leading technology employers by prioritizing precision, unbending professional ethics, and lasting relationship value.
             </p>
           </div>
@@ -108,25 +108,25 @@ export default function BusinessPracticesPage() {
             return (
               <div
                 key={i}
-                className="p-8 rounded-3xl bg-[#09122C] border border-white/10 hover:border-abis-blue/40 transition-all duration-300 space-y-6"
+                className="p-8 rounded-3xl bg-surface border border-theme/60 hover:border-abis-blue/40 transition-all duration-300 space-y-6"
               >
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-2xl bg-abis-blue/20 text-abis-blue">
+                  <div className="p-3 rounded-2xl bg-abis-blue/20 text-accent-fg">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-white">
+                  <h3 className="text-xl font-bold text-fg">
                     {practice.title}
                   </h3>
                 </div>
 
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-fg-muted leading-relaxed">
                   {practice.desc}
                 </p>
 
-                <div className="pt-2 border-t border-white/5 space-y-2.5">
+                <div className="pt-2 border-t border-theme/60 space-y-2.5">
                   {practice.points.map((pt, j) => (
-                    <div key={j} className="flex items-start gap-2.5 text-xs text-slate-300">
-                      <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <div key={j} className="flex items-start gap-2.5 text-xs text-fg-muted">
+                      <CheckCircle2 className="w-4 h-4 text-accent-fg shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </div>
                   ))}
@@ -138,16 +138,16 @@ export default function BusinessPracticesPage() {
       </section>
 
       {/* RPC Methodology Deep Dive */}
-      <section className="py-20 bg-[#040816] border-y border-white/10">
+      <section className="py-20 bg-bg border-y border-theme/60">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
-            <span className="text-xs font-mono uppercase tracking-wider text-abis-blue">
+            <span className="text-xs font-mono uppercase tracking-wider text-accent-fg">
               20+ Years RPC Mastery
             </span>
-            <h2 className="text-3xl font-extrabold text-white">
+            <h2 className="text-3xl font-extrabold text-fg">
               The Recruitment Process Cycle (RPC) Architecture
             </h2>
-            <p className="text-xs sm:text-sm text-slate-400">
+            <p className="text-xs sm:text-sm text-fg-subtle">
               How ABIS actively optimizes each operational milestone to guarantee high-velocity, high-retention talent delivery.
             </p>
           </div>
@@ -177,15 +177,15 @@ export default function BusinessPracticesPage() {
             ].map((st, idx) => (
               <div
                 key={idx}
-                className="p-6 rounded-2xl bg-[#08112C] border border-white/10 space-y-3 relative group hover:border-abis-blue/50 transition-colors"
+                className="p-6 rounded-2xl bg-surface border border-theme/60 space-y-3 relative group hover:border-abis-blue/50 transition-colors"
               >
-                <span className="text-3xl font-extrabold text-abis-blue/40 font-mono group-hover:text-abis-blue transition-colors">
+                <span className="text-3xl font-extrabold text-accent-fg/40 font-mono group-hover:text-accent-fg transition-colors">
                   {st.step}
                 </span>
-                <h4 className="text-base font-bold text-white">
+                <h4 className="text-base font-bold text-fg">
                   {st.name}
                 </h4>
-                <p className="text-xs text-slate-400 leading-relaxed">
+                <p className="text-xs text-fg-subtle leading-relaxed">
                   {st.detail}
                 </p>
               </div>

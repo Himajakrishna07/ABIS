@@ -41,21 +41,21 @@ const pillars = [
 
 export default function WhyChooseAbis() {
   return (
-    <section className="py-24 bg-[#070C1E] relative tech-grid overflow-hidden">
+    <section className="py-24 bg-bg-alt relative tech-grid overflow-hidden">
       {/* Background radial glow */}
       <div className="absolute bottom-0 left-1/3 w-96 h-96 bg-abis-blue/15 rounded-full blur-[160px] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-abis-blue/10 border border-abis-blue/30 text-abis-blue text-xs font-semibold uppercase tracking-wider">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-abis-blue/10 border border-abis-blue/30 text-accent-fg text-xs font-semibold uppercase tracking-wider">
             Client-Oriented Value Proposition
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-fg tracking-tight">
             Why Enterprise Leaders <span className="text-gradient-blue">Choose ABIS.</span>
           </h2>
 
-          <p className="text-base text-slate-300 leading-relaxed">
+          <p className="text-base text-fg-muted leading-relaxed">
             In an era of generic staffing agencies, ABIS stands apart as a specialized consulting partner focused on sustained business momentum and technical precision.
           </p>
         </div>
@@ -67,16 +67,16 @@ export default function WhyChooseAbis() {
             return (
               <div
                 key={idx}
-                className="p-8 rounded-3xl bg-[#0A1330] border border-white/10 hover:border-abis-blue/40 transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_15px_35px_-10px_rgba(32,109,247,0.2)] flex flex-col justify-between"
+                className="p-8 rounded-3xl bg-surface border border-theme/60 hover:border-abis-blue/40 transition-all duration-300 group hover:-translate-y-1 hover:shadow-[0_15px_35px_-10px_rgba(32,109,247,0.2)] flex flex-col justify-between"
               >
                 <div>
-                  <div className="p-3.5 rounded-2xl bg-white/[0.04] text-abis-blue group-hover:bg-abis-blue group-hover:text-white transition-all duration-300 w-fit mb-6">
+                  <div className="p-3.5 rounded-2xl bg-fg/5 text-accent-fg group-hover:bg-abis-blue group-hover:text-on-accent transition-all duration-300 w-fit mb-6">
                     <Icon className="w-6 h-6" />
                   </div>
-                  <h3 className="text-lg font-bold text-white mb-3 group-hover:text-abis-blue transition-colors">
+                  <h3 className="text-lg font-bold text-fg mb-3 group-hover:text-accent-fg transition-colors">
                     {pillar.title}
                   </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed">
+                  <p className="text-sm text-fg-muted leading-relaxed">
                     {pillar.description}
                   </p>
                 </div>

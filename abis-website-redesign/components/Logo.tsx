@@ -23,19 +23,32 @@ export default function Logo({
       <div className="relative flex items-center">
         {/* We have both official Akshaya_blue-1.svg and Akshaya_white.png in public/brand */}
         {variant === "white" ? (
-          <div className="flex items-center">
-            {/* High fidelity container with white logo on dark navbar */}
-            <Image
-              src="/brand/Akshaya_white.png"
-              alt="Akshaya Business IT Solutions"
-              width={width}
-              height={height}
-              className="h-10 w-auto object-contain drop-shadow-[0_2px_10px_rgba(32,109,247,0.2)]"
-              priority
-            />
-          </div>
+          <>
+            <div className="logo-dark-variant flex items-center">
+              {/* High fidelity container with white logo on dark navbar/footer */}
+              <Image
+                src="/brand/Akshaya_white.png"
+                alt="Akshaya Business IT Solutions"
+                width={width}
+                height={height}
+                className="h-10 w-auto object-contain drop-shadow-[0_2px_10px_rgba(32,109,247,0.2)]"
+                priority
+              />
+            </div>
+            <div className="logo-light-variant hidden items-center">
+              {/* Crisp blue/dark logo on light navbar/footer */}
+              <Image
+                src="/brand/Akshaya_blue-1.svg"
+                alt="Akshaya Business IT Solutions"
+                width={width}
+                height={height}
+                className="h-10 w-auto object-contain"
+                priority
+              />
+            </div>
+          </>
         ) : (
-          <div className="flex items-center bg-white/90 p-1.5 rounded-lg border border-slate-200">
+          <div className="flex items-center bg-surface p-1.5 rounded-lg border border-theme/60">
             <Image
               src="/brand/Akshaya_blue-1.svg"
               alt="Akshaya Business IT Solutions"

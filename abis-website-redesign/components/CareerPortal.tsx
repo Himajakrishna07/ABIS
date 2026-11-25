@@ -188,15 +188,15 @@ export default function CareerPortal() {
   return (
     <div className="space-y-12">
       {/* Search & Filter Bar */}
-      <div className="p-6 rounded-3xl bg-[#08112C] border border-white/10 flex flex-col md:flex-row items-center gap-4">
+      <div className="p-6 rounded-3xl bg-surface border border-theme/60 flex flex-col md:flex-row items-center gap-4">
         <div className="relative flex-1 w-full">
-          <Search className="w-5 h-5 text-slate-400 absolute left-4 top-1/2 -translate-y-1/2" />
+          <Search className="w-5 h-5 text-fg-subtle absolute left-4 top-1/2 -translate-y-1/2" />
           <input
             type="text"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search roles by title, technology, or location..."
-            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-white/[0.04] border border-white/10 focus:border-abis-blue outline-none text-sm text-white placeholder-slate-400"
+            className="w-full pl-12 pr-4 py-3.5 rounded-2xl bg-fg/5 border border-theme/60 focus:border-abis-blue outline-none text-sm text-fg placeholder-fg-subtle"
           />
         </div>
 
@@ -208,8 +208,8 @@ export default function CareerPortal() {
               onClick={() => setSelectedDept(dept)}
               className={`px-4 py-2.5 rounded-xl text-xs font-semibold whitespace-nowrap transition-colors ${
                 selectedDept === dept
-                  ? "bg-abis-blue text-white"
-                  : "bg-white/[0.04] text-slate-400 hover:text-white hover:bg-white/10 border border-white/5"
+                  ? "bg-abis-blue text-on-accent"
+                  : "bg-fg/5 text-fg-subtle hover:text-fg hover:bg-fg/5 border border-theme/60"
               }`}
             >
               {dept}
@@ -220,16 +220,16 @@ export default function CareerPortal() {
 
       {/* Job Cards Grid */}
       <div className="space-y-6">
-        <div className="flex items-center justify-between text-xs text-slate-400 px-2">
+        <div className="flex items-center justify-between text-xs text-fg-subtle px-2">
           <span>Showing {filteredJobs.length} Verified Position{filteredJobs.length === 1 ? "" : "s"}</span>
           <span>Locations: Hyderabad &bull; Bengaluru &bull; USA</span>
         </div>
 
         {filteredJobs.length === 0 ? (
-          <div className="p-12 rounded-3xl bg-white/[0.02] border border-white/10 text-center space-y-3">
-            <Briefcase className="w-10 h-10 text-slate-500 mx-auto" />
-            <h4 className="text-lg font-bold text-white">No exact role matched your query</h4>
-            <p className="text-xs text-slate-400 max-w-md mx-auto">
+          <div className="p-12 rounded-3xl bg-fg/5 border border-theme/60 text-center space-y-3">
+            <Briefcase className="w-10 h-10 text-fg-subtle mx-auto" />
+            <h4 className="text-lg font-bold text-fg">No exact role matched your query</h4>
+            <p className="text-xs text-fg-subtle max-w-md mx-auto">
               We are constantly seeking outstanding recruitment consultants and account partners. Send your resume directly to hr@akshayaitsolutions.com for future openings.
             </p>
           </div>
@@ -238,19 +238,19 @@ export default function CareerPortal() {
             {filteredJobs.map((job) => (
               <div
                 key={job.id}
-                className="p-8 rounded-3xl bg-[#09122C] border border-white/10 hover:border-abis-blue/40 transition-all duration-300 space-y-6 group"
+                className="p-8 rounded-3xl bg-surface border border-theme/60 hover:border-abis-blue/40 transition-all duration-300 space-y-6 group"
               >
-                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-white/10">
+                <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-theme/60">
                   <div>
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-abis-blue/15 text-abis-blue border border-abis-blue/30">
+                      <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-abis-blue/15 text-accent-fg border border-abis-blue/30">
                         {job.department}
                       </span>
-                      <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-white/5 text-slate-300">
+                      <span className="px-2.5 py-1 rounded-md text-[11px] font-mono bg-fg/5 text-fg-muted">
                         {job.type}
                       </span>
                     </div>
-                    <h3 className="text-xl sm:text-2xl font-bold text-white group-hover:text-abis-blue transition-colors">
+                    <h3 className="text-xl sm:text-2xl font-bold text-fg group-hover:text-accent-fg transition-colors">
                       {job.title}
                     </h3>
                   </div>
@@ -258,25 +258,25 @@ export default function CareerPortal() {
                   <button
                     type="button"
                     onClick={() => handleApply(job)}
-                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-white bg-abis-blue hover:bg-abis-blue-hover transition-colors shadow-lg shrink-0"
+                    className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-on-accent bg-abis-blue hover:bg-abis-blue-hover transition-colors shadow-lg shrink-0"
                   >
                     <span>Apply for Role</span>
                   </button>
                 </div>
 
-                <p className="text-sm text-slate-300 leading-relaxed">
+                <p className="text-sm text-fg-muted leading-relaxed">
                   {job.summary}
                 </p>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
                   <div className="space-y-2">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                    <h4 className="text-xs font-bold text-fg uppercase tracking-wider">
                       Key Responsibilities
                     </h4>
-                    <ul className="space-y-1.5 text-xs text-slate-400">
+                    <ul className="space-y-1.5 text-xs text-fg-subtle">
                       {job.responsibilities.map((r, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-abis-blue shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-accent-fg shrink-0 mt-0.5" />
                           <span>{r}</span>
                         </li>
                       ))}
@@ -284,13 +284,13 @@ export default function CareerPortal() {
                   </div>
 
                   <div className="space-y-2">
-                    <h4 className="text-xs font-bold text-white uppercase tracking-wider">
+                    <h4 className="text-xs font-bold text-fg uppercase tracking-wider">
                       Target Qualifications
                     </h4>
-                    <ul className="space-y-1.5 text-xs text-slate-400">
+                    <ul className="space-y-1.5 text-xs text-fg-subtle">
                       {job.requirements.map((req, i) => (
                         <li key={i} className="flex items-start gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-accent-fg shrink-0 mt-0.5" />
                           <span>{req}</span>
                         </li>
                       ))}
@@ -298,13 +298,13 @@ export default function CareerPortal() {
                   </div>
                 </div>
 
-                <div className="pt-4 border-t border-white/5 flex flex-wrap items-center gap-6 text-xs text-slate-400">
+                <div className="pt-4 border-t border-theme/60 flex flex-wrap items-center gap-6 text-xs text-fg-subtle">
                   <span className="flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-abis-blue" />
+                    <MapPin className="w-3.5 h-3.5 text-accent-fg" />
                     {job.location}
                   </span>
                   <span className="flex items-center gap-1.5">
-                    <Clock className="w-3.5 h-3.5 text-cyan-400" />
+                    <Clock className="w-3.5 h-3.5 text-accent-fg" />
                     Experience: {job.experience}
                   </span>
                 </div>
@@ -317,32 +317,32 @@ export default function CareerPortal() {
       {/* Application Modal */}
       {activeJob && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-fade-in overflow-y-auto">
-          <div className="bg-[#091330] border border-white/15 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-6 my-8 relative shadow-2xl">
+          <div className="bg-surface border border-theme/60 rounded-3xl max-w-2xl w-full p-6 sm:p-8 space-y-6 my-8 relative shadow-2xl">
             <button
               type="button"
               onClick={() => setActiveJob(null)}
-              className="absolute top-5 right-5 p-2 rounded-xl text-slate-400 hover:text-white bg-white/5 hover:bg-white/10 transition-colors"
+              className="absolute top-5 right-5 p-2 rounded-xl text-fg-subtle hover:text-fg bg-fg/5 hover:bg-fg/5 transition-colors"
             >
               <X className="w-5 h-5" />
             </button>
 
             {applicationSuccess ? (
               <div className="text-center py-8 space-y-4">
-                <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center mx-auto">
+                <div className="w-16 h-16 rounded-full bg-emerald-500/20 text-emerald-700 dark:text-emerald-400 flex items-center justify-center mx-auto">
                   <CheckCircle2 className="w-9 h-9" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Application Successfully Logged</h3>
-                <p className="text-xs text-slate-300 max-w-md mx-auto leading-relaxed">
-                  Your profile for <strong className="text-white">{activeJob.title}</strong> has been received by our talent team.
+                <h3 className="text-2xl font-bold text-fg">Application Successfully Logged</h3>
+                <p className="text-xs text-fg-muted max-w-md mx-auto leading-relaxed">
+                  Your profile for <strong className="text-fg">{activeJob.title}</strong> has been received by our talent team.
                 </p>
-                <div className="inline-block px-4 py-2 rounded-xl bg-white/5 border border-white/10 font-mono text-xs text-cyan-400">
+                <div className="inline-block px-4 py-2 rounded-xl bg-fg/5 border border-theme/60 font-mono text-xs text-accent-fg">
                   Tracking Code: {applicationSuccess}
                 </div>
                 <div className="pt-4">
                   <button
                     type="button"
                     onClick={() => setActiveJob(null)}
-                    className="px-6 py-2.5 rounded-xl text-xs font-semibold text-white bg-abis-blue hover:bg-abis-blue-hover transition-colors"
+                    className="px-6 py-2.5 rounded-xl text-xs font-semibold text-on-accent bg-abis-blue hover:bg-abis-blue-hover transition-colors"
                   >
                     Close Window
                   </button>
@@ -351,27 +351,27 @@ export default function CareerPortal() {
             ) : (
               <form onSubmit={submitApplication} className="space-y-4">
                 <div>
-                  <span className="text-xs font-mono uppercase text-abis-blue tracking-wider">
+                  <span className="text-xs font-mono uppercase text-accent-fg tracking-wider">
                     Application Form
                   </span>
-                  <h3 className="text-xl font-bold text-white mt-1">
+                  <h3 className="text-xl font-bold text-fg mt-1">
                     Apply for {activeJob.title}
                   </h3>
-                  <p className="text-xs text-slate-400">
+                  <p className="text-xs text-fg-subtle">
                     Location: {activeJob.location} &bull; Experience: {activeJob.experience}
                   </p>
                 </div>
 
                 {formError && (
                   <div className="p-3 rounded-xl bg-rose-500/10 border border-rose-500/30 flex items-center gap-2 text-xs text-rose-300">
-                    <AlertCircle className="w-4 h-4 shrink-0 text-rose-400" />
+                    <AlertCircle className="w-4 h-4 shrink-0 text-red-600 dark:text-red-400" />
                     <span>{formError}</span>
                   </div>
                 )}
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Full Name *
                     </label>
                     <input
@@ -381,13 +381,13 @@ export default function CareerPortal() {
                       onChange={(e) =>
                         setApplicant({ ...applicant, fullName: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="Jane Doe"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Email Address *
                     </label>
                     <input
@@ -397,13 +397,13 @@ export default function CareerPortal() {
                       onChange={(e) =>
                         setApplicant({ ...applicant, email: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="jane@example.com"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Phone Number *
                     </label>
                     <input
@@ -413,13 +413,13 @@ export default function CareerPortal() {
                       onChange={(e) =>
                         setApplicant({ ...applicant, phone: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="+91 / +1 ..."
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Total Experience *
                     </label>
                     <input
@@ -432,7 +432,7 @@ export default function CareerPortal() {
                           experienceYears: e.target.value,
                         })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="e.g. 5 Years"
                     />
                   </div>
@@ -440,7 +440,7 @@ export default function CareerPortal() {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Current Company
                     </label>
                     <input
@@ -452,13 +452,13 @@ export default function CareerPortal() {
                           currentCompany: e.target.value,
                         })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="Current Employer"
                     />
                   </div>
 
                   <div>
-                    <label className="text-xs font-medium text-slate-300 block mb-1">
+                    <label className="text-xs font-medium text-fg-muted block mb-1">
                       Notice Period
                     </label>
                     <input
@@ -470,7 +470,7 @@ export default function CareerPortal() {
                           noticePeriod: e.target.value,
                         })
                       }
-                      className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue"
+                      className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue"
                       placeholder="e.g. 30 Days / Immediate"
                     />
                   </div>
@@ -478,21 +478,21 @@ export default function CareerPortal() {
 
                 {/* File Upload */}
                 <div>
-                  <label className="text-xs font-medium text-slate-300 block mb-1">
+                  <label className="text-xs font-medium text-fg-muted block mb-1">
                     Upload Resume (PDF, DOC, DOCX) *
                   </label>
-                  <label className="flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed border-white/15 hover:border-abis-blue bg-white/[0.02] cursor-pointer transition-colors">
-                    <Upload className="w-6 h-6 text-abis-blue mb-2" />
-                    <span className="text-xs text-slate-300">
+                  <label className="flex flex-col items-center justify-center p-6 rounded-2xl border-2 border-dashed border-theme/60 hover:border-abis-blue bg-fg/5 cursor-pointer transition-colors">
+                    <Upload className="w-6 h-6 text-accent-fg mb-2" />
+                    <span className="text-xs text-fg-muted">
                       {selectedFile ? (
-                        <span className="font-semibold text-cyan-400">
+                        <span className="font-semibold text-accent-fg">
                           {selectedFile.name} ({(selectedFile.size / 1024).toFixed(1)} KB)
                         </span>
                       ) : (
                         "Click to select resume document"
                       )}
                     </span>
-                    <span className="text-[10px] text-slate-500 mt-1">
+                    <span className="text-[10px] text-fg-subtle mt-1">
                       Max file size: 5MB
                     </span>
                     <input
@@ -509,7 +509,7 @@ export default function CareerPortal() {
                 </div>
 
                 <div>
-                  <label className="text-xs font-medium text-slate-300 block mb-1">
+                  <label className="text-xs font-medium text-fg-muted block mb-1">
                     Brief Note or Key Skills
                   </label>
                   <textarea
@@ -518,7 +518,7 @@ export default function CareerPortal() {
                     onChange={(e) =>
                       setApplicant({ ...applicant, coverNote: e.target.value })
                     }
-                    className="w-full px-3.5 py-2.5 rounded-xl bg-white/[0.04] border border-white/10 text-xs text-white outline-none focus:border-abis-blue resize-none"
+                    className="w-full px-3.5 py-2.5 rounded-xl bg-fg/5 border border-theme/60 text-xs text-fg outline-none focus:border-abis-blue resize-none"
                     placeholder="Relevant domains, certifications, or career goals..."
                   />
                 </div>
@@ -527,7 +527,7 @@ export default function CareerPortal() {
                   <button
                     type="submit"
                     disabled={submitting}
-                    className="w-full py-3.5 px-4 rounded-xl font-semibold text-xs text-white bg-abis-blue hover:bg-abis-blue-hover disabled:opacity-50 transition-colors flex items-center justify-center gap-2 shadow-lg"
+                    className="w-full py-3.5 px-4 rounded-xl font-semibold text-xs text-on-accent bg-abis-blue hover:bg-abis-blue-hover disabled:opacity-50 transition-colors flex items-center justify-center gap-2 shadow-lg"
                   >
                     {submitting ? (
                       <>
