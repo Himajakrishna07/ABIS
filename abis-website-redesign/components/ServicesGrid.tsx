@@ -187,7 +187,7 @@ export default function ServicesGrid() {
               <div className="p-6 pt-0">
                 <Link
                   href={svc.href}
-                  className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-fg/5 group-hover:bg-abis-blue text-sm font-semibold text-on-accent transition-all duration-200"
+                  className="w-full inline-flex items-center justify-between px-4 py-3 rounded-xl bg-fg/5 group-hover:bg-abis-blue text-sm font-semibold text-fg group-hover:text-on-accent transition-all duration-200"
                 >
                   <span>Explore Service Details</span>
                   <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
