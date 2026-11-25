@@ -311,3 +311,353 @@ html.light .theme-toggle {
 html.light .theme-toggle:hover {
   background-color: #1A5BD6 !important;
 }
+
+/* ==============================================================
+   LIGHT THEME – STEP 1: BROADEN TEXT RULES
+   Covers text-white/opacity, text-slate-*, text-gray-*, text-blue-*, text-cyan-*
+   ============================================================== */
+
+/* All light-on-dark Tailwind text classes -> dark readable text */
+html.light [class*="text-white"],
+html.light [class*="text-slate-50"],
+html.light [class*="text-slate-100"],
+html.light [class*="text-slate-200"],
+html.light [class*="text-slate-300"],
+html.light [class*="text-gray-50"],
+html.light [class*="text-gray-100"],
+html.light [class*="text-gray-200"],
+html.light [class*="text-gray-300"],
+html.light [class*="text-blue-50"],
+html.light [class*="text-blue-100"],
+html.light [class*="text-blue-200"],
+html.light [class*="text-cyan-50"],
+html.light [class*="text-cyan-100"],
+html.light [class*="text-cyan-200"] { color: #0F172A !important; }
+
+html.light [class*="text-slate-400"],
+html.light [class*="text-gray-400"] { color: #475569 !important; }
+
+/* gradient headline text that starts at white -> dark-to-blue gradient */
+html.light .text-gradient-blue,
+html.light .text-gradient-cyan {
+  background-image: linear-gradient(135deg, #0F172A 0%, #1D4ED8 60%, #206DF7 100%) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  color: transparent !important;
+}
+
+/* bg-clip-text gradients starting from white */
+html.light [class*="from-white"][class*="bg-clip-text"],
+html.light [class*="via-white"][class*="bg-clip-text"] {
+  background-image: linear-gradient(135deg, #0F172A 0%, #1D4ED8 60%, #206DF7 100%) !important;
+}
+
+/* ==============================================================
+   LIGHT THEME – STEP 2: TOP INFO BAR
+   bg-[#040714] strip with text-slate-400 items and hover text
+   ============================================================== */
+
+/* Top utility bar surface */
+html.light [class*="bg-[#040714]"] {
+  background-color: #F1F5F9 !important;
+  border-bottom-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Top bar text: location, phone, email */
+html.light [class*="bg-[#040714]"] [class*="text-slate-400"],
+html.light [class*="bg-[#040714]"] span {
+  color: #475569 !important;
+}
+html.light [class*="bg-[#040714]"] span:hover {
+  color: #0F172A !important;
+}
+
+/* "Trusted by Fortune 500" text in top bar */
+html.light [class*="bg-[#040714]"] [class*="text-slate-400"]:last-child {
+  color: #64748B !important;
+}
+
+/* ==============================================================
+   STEP 2b: NAVBAR DESKTOP LINKS
+   ============================================================== */
+
+/* Inactive nav links: text-slate-300 -> #334155 */
+html.light header nav a[class*="text-slate-300"],
+html.light header nav button[class*="text-slate-300"] {
+  color: #334155 !important;
+}
+html.light header nav a[class*="hover:text-white"]:hover,
+html.light header nav button[class*="hover:text-white"]:hover {
+  color: #206DF7 !important;
+  background-color: rgba(32, 109, 247, 0.06) !important;
+}
+
+/* Active nav pill: bg-abis-blue/15 -> light blue tint, text blue */
+html.light header nav a[class*="bg-abis-blue"],
+html.light header nav button[class*="bg-abis-blue"] {
+  background-color: #EAF1FE !important;
+  color: #206DF7 !important;
+  border-color: rgba(32, 109, 247, 0.30) !important;
+}
+
+/* ChevronDown on services button */
+html.light header nav [class*="text-slate-400"] {
+  color: #64748B !important;
+}
+
+/* Mobile hamburger button */
+html.light header button[class*="text-slate-300"] {
+  color: #334155 !important;
+}
+html.light header button[class*="hover:text-white"]:hover {
+  color: #0F172A !important;
+  background-color: rgba(15, 23, 42, 0.06) !important;
+}
+
+/* ==============================================================
+   STEP 2c: SERVICES DROPDOWN bg-[#0A1128]
+   ============================================================== */
+
+html.light [class*="bg-[#0A1128]"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.18) !important;
+}
+html.light [class*="bg-[#0A1128]"] [class*="text-white"] {
+  color: #0F172A !important;
+}
+html.light [class*="bg-[#0A1128]"] [class*="text-slate-400"] {
+  color: #64748B !important;
+}
+html.light [class*="bg-[#0A1128]"] .group:hover [class*="text-white"] {
+  color: #206DF7 !important;
+}
+html.light [class*="bg-[#0A1128]"] [class*="border-white"] {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light [class*="bg-[#0A1128]"] a[class*="hover:bg-white"] {
+  background-color: transparent !important;
+}
+html.light [class*="bg-[#0A1128]"] a[class*="hover:bg-white"]:hover {
+  background-color: rgba(32, 109, 247, 0.06) !important;
+  border-color: rgba(32, 109, 247, 0.20) !important;
+}
+html.light [class*="bg-[#0A1128]"] [class*="bg-white/[0.04]"] {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+/* ==============================================================
+   STEP 2d: MOBILE DRAWER bg-[#070C1E]
+   ============================================================== */
+
+html.light [class*="bg-[#070C1E]"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+html.light [class*="bg-[#070C1E]"] [class*="text-slate-200"],
+html.light [class*="bg-[#070C1E]"] [class*="text-slate-300"] {
+  color: #334155 !important;
+}
+html.light [class*="bg-[#070C1E]"] [class*="hover:text-white"]:hover {
+  color: #0F172A !important;
+}
+html.light [class*="bg-[#070C1E]"] [class*="border-white"] {
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+/* Mobile services sub-panel bg-black/30 */
+html.light [class*="bg-black/30"] {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+html.light [class*="bg-black/30"] [class*="text-slate-300"]:not([class*="bg-abis-blue"]) {
+  color: #334155 !important;
+}
+
+/* ==============================================================
+   STEP 2e: HERO SECTION
+   ============================================================== */
+
+/* Hero wrapper: radial glow blobs -> subtle on light */
+html.light section[class*="tech-grid"] [class*="bg-abis-blue/15"],
+html.light section[class*="tech-grid"] [class*="bg-cyan-500/10"] {
+  opacity: 0.3 !important;
+}
+
+/* Enterprise tag pill: bg-white/[0.04] border-abis-blue/30 */
+html.light section[class*="tech-grid"] [class*="bg-white/[0.04]"][class*="border-abis-blue"] {
+  background-color: rgba(32, 109, 247, 0.06) !important;
+  border-color: rgba(32, 109, 247, 0.30) !important;
+}
+html.light section[class*="tech-grid"] [class*="bg-white/[0.04]"][class*="border-abis-blue"] [class*="text-slate-200"] {
+  color: #1E3A8A !important;
+}
+
+/* Hero h1: text-white -> #0F172A */
+html.light section[class*="tech-grid"] h1[class*="text-white"] {
+  color: #0F172A !important;
+}
+
+/* Hero subheading: text-slate-300 */
+html.light section[class*="tech-grid"] p[class*="text-slate-300"] {
+  color: #475569 !important;
+}
+
+/* Hero highlight pills row: text-slate-300, border-white/10 */
+html.light section[class*="tech-grid"] [class*="border-t"][class*="border-white"] {
+  border-top-color: rgba(15, 23, 42, 0.12) !important;
+}
+html.light section[class*="tech-grid"] [class*="text-xs"][class*="text-slate-300"] {
+  color: #475569 !important;
+}
+
+/* "Partner With Us" secondary button: bg-white/[0.05] border-white/10 text-slate-200 */
+html.light a[class*="bg-white/[0.05]"][class*="border-white/10"],
+html.light a[class*="bg-white/[0.05]"][class*="border-white"] {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+  border-color: rgba(15, 23, 42, 0.18) !important;
+  color: #0F172A !important;
+}
+html.light a[class*="bg-white/[0.05]"][class*="border-white"]:hover,
+html.light a[class*="hover:bg-white/[0.1]"]:hover {
+  background-color: rgba(15, 23, 42, 0.08) !important;
+  border-color: rgba(15, 23, 42, 0.25) !important;
+  color: #0F172A !important;
+}
+
+/* ==============================================================
+   STEP 2f: HERO RIGHT CARD (Full-Spectrum Delivery)
+   glass-panel border-white/10 shadow-black
+   ============================================================== */
+
+/* Card rows: bg-white/[0.03] border-white/5 */
+html.light [class*="bg-white/[0.03]"][class*="border-white/5"],
+html.light [class*="hover:bg-white/[0.07]"][class*="border-white/5"] {
+  background-color: #F8FAFC !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light [class*="bg-white/[0.03]"][class*="border-white/5"]:hover,
+html.light [class*="hover:bg-white/[0.07]"][class*="border-white/5"]:hover {
+  background-color: #FFFFFF !important;
+  border-color: rgba(32, 109, 247, 0.20) !important;
+}
+
+/* Service row labels: text-slate-200 */
+html.light [class*="bg-white/[0.03]"] [class*="text-slate-200"],
+html.light [class*="hover:bg-white/[0.07]"] [class*="text-slate-200"] {
+  color: #1E293B !important;
+}
+
+/* Service tag chips: text-slate-400 bg-white/5 */
+html.light [class*="text-slate-400"][class*="bg-white/5"] {
+  color: #475569 !important;
+  background-color: #EEF2F9 !important;
+}
+
+/* Card footer text: text-slate-400 */
+html.light [class*="glass-panel"] [class*="text-slate-400"]:not([class*="bg-"]) {
+  color: #64748B !important;
+}
+html.light [class*="glass-panel"] [class*="border-t"][class*="border-white"] {
+  border-top-color: rgba(15, 23, 42, 0.10) !important;
+}
+
+/* Card header border */
+html.light [class*="glass-panel"] [class*="border-b"][class*="border-white"] {
+  border-bottom-color: rgba(15, 23, 42, 0.10) !important;
+}
+html.light [class*="glass-panel"] h3[class*="text-white"] {
+  color: #0F172A !important;
+}
+
+/* abis-blue/20 icon wrapper in card: keep it visible */
+html.light [class*="bg-abis-blue/20"] {
+  background-color: rgba(32, 109, 247, 0.12) !important;
+}
+
+/* ==============================================================
+   STEP 2g: FLOATING DECORATIVE CARDS (bg-[#0B1430])
+   ============================================================== */
+
+html.light [class*="bg-[#0B1430]"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 8px 32px -8px rgba(15, 23, 42, 0.18) !important;
+}
+html.light [class*="bg-[#0B1430]"] [class*="text-white"] {
+  color: #0F172A !important;
+}
+html.light [class*="bg-[#0B1430]"] [class*="text-slate-400"] {
+  color: #64748B !important;
+}
+
+/* ==============================================================
+   STEP 2h: FOOTER bg-[#03060F]
+   Already covered by footer rule but reinforce text colours
+   ============================================================== */
+
+html.light footer [class*="text-slate-300"] {
+  color: #475569 !important;
+}
+html.light footer [class*="text-slate-400"] {
+  color: #64748B !important;
+}
+html.light footer [class*="text-white"] {
+  color: #0F172A !important;
+}
+html.light footer [class*="border-white"] {
+  border-color: rgba(15, 23, 42, 0.10) !important;
+}
+html.light footer [class*="bg-white/[0.04]"] {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+/* ==============================================================
+   STEP 2i: CREDIBILITY BAR bg-[#040816]
+   ============================================================== */
+
+html.light [class*="bg-[#040816]"] {
+  background-color: #F8FAFC !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light [class*="bg-[#040816]"] [class*="text-white"] {
+  color: #0F172A !important;
+}
+html.light [class*="bg-[#040816]"] [class*="text-slate-400"] {
+  color: #64748B !important;
+}
+html.light [class*="bg-[#040816]"] [class*="bg-white/[0.02]"],
+html.light [class*="bg-[#040816]"] [class*="bg-white/[0.04]"] {
+  background-color: #FFFFFF !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+html.light [class*="bg-[#040816]"] [class*="hover:bg-white/[0.05]"]:hover {
+  background-color: rgba(32, 109, 247, 0.04) !important;
+}
+html.light [class*="bg-[#040816]"] [class*="bg-white/5"] {
+  background-color: rgba(15, 23, 42, 0.05) !important;
+}
+
+/* ==============================================================
+   STEP 3: RESTORE WHITE TEXT ON BLUE / GRADIENT / PHOTO SURFACES
+   Must come LAST to override the broad rules above
+   ============================================================== */
+
+/* Blue solid backgrounds always keep white text */
+html.light [class*="bg-abis-blue"] *,
+html.light [class*="bg-abis-blue-hover"] *,
+html.light .theme-toggle *,
+html.light .keep-white,
+html.light .keep-white * { color: #FFFFFF !important; }
+
+/* bg-abis-blue/20 icon wrappers use blue icon, not white bg - icon color is set by their own text-* class */
+
+/* Cyan/indigo/emerald accent icons must stay their accent colour, not get overridden to #0F172A */
+html.light [class*="text-cyan-400"] { color: #0891B2 !important; }
+html.light [class*="text-indigo-400"] { color: #4F46E5 !important; }
+html.light [class*="text-emerald-400"] { color: #059669 !important; }
+html.light [class*="text-amber-400"] { color: #D97706 !important; }
+html.light [class*="text-sky-400"] { color: #0284C7 !important; }
+html.light [class*="text-blue-400"] { color: #2563EB !important; }
+
+/* abis-blue coloured text (links, icons) stays blue */
+html.light [class*="text-abis-blue"] { color: #206DF7 !important; }
